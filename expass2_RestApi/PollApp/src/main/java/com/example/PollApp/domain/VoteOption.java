@@ -3,6 +3,7 @@ package com.example.PollApp.domain;
 public class VoteOption {
     private String caption;
     private int presentationOrder;
+    private Poll poll;
 
     public VoteOption() {
     }
@@ -21,5 +22,13 @@ public class VoteOption {
 
     public void setPresentationOrder(int presentationOrder) {
         this.presentationOrder = presentationOrder;
+    }
+
+    public Poll getPoll() {
+        return poll;
+    }
+
+    public void setPoll(Poll poll) {
+        this.poll = poll;
     }
 }

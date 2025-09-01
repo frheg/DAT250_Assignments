@@ -1,11 +1,18 @@
 package com.example.PollApp.domain;
 
 import java.time.Instant;
+import java.util.List;
+
+// Forward declaration to avoid circular dependency
+import com.example.PollApp.domain.VoteOption;
+import com.example.PollApp.domain.User;
 
 public class Poll {
     private String question;
     private Instant publishedAt;
     private Instant validUntil;
+    private List<VoteOption> voteOptions;
+    private User creator;
 
     public Poll() {
     }
@@ -32,5 +39,21 @@ public class Poll {
 
     public void setValidUntil(Instant validUntil) {
         this.validUntil = validUntil;
+    }
+
+    public List<VoteOption> getVoteOptions() {
+        return voteOptions;
+    }
+
+    public void setVoteOptions(List<VoteOption> voteOptions) {
+        this.voteOptions = voteOptions;
+    }
+
+    public User getCreator() {
+        return creator;
+    }
+
+    public void setCreator(User creator) {
+        this.creator = creator;
     }
 }
