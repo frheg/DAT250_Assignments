@@ -21,25 +21,25 @@ public class PollManager {
 	private final Map<Long, VoteOption> voteOptions = new HashMap<>();
 	private final Map<Long, Vote> votes = new HashMap<>();
 
-	// User CRUD
+	// User
 	public User getUser(Long id) { return users.get(id); }
 	public Collection<User> getAllUsers() { return users.values(); }
 	public void addUser(Long id, User user) { users.put(id, user); }
 	public void removeUser(Long id) { users.remove(id); }
 
-	// Poll CRUD
+	// Poll
 	public Poll getPoll(Long id) { return polls.get(id); }
 	public Collection<Poll> getAllPolls() { return polls.values(); }
 	public void addPoll(Long id, Poll poll) { polls.put(id, poll); }
 	public void removePoll(Long id) { polls.remove(id); }
 
-	// VoteOption CRUD
+	// VoteOption
 	public VoteOption getVoteOption(Long id) { return voteOptions.get(id); }
 	public Collection<VoteOption> getAllVoteOptions() { return voteOptions.values(); }
 	public void addVoteOption(Long id, VoteOption option) { voteOptions.put(id, option); }
 	public void removeVoteOption(Long id) { voteOptions.remove(id); }
 
-	// Vote CRUD
+	// Vote
 	public Vote getVote(Long id) { return votes.get(id); }
 	public Collection<Vote> getAllVotes() { return votes.values(); }
 	public void addVote(Long id, Vote vote) { votes.put(id, vote); }

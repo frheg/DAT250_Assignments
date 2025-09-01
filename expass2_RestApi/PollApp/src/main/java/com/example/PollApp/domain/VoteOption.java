@@ -2,6 +2,7 @@ package com.example.PollApp.domain;
 
 public class VoteOption {
     private String caption;
+    private Long id;
     private int presentationOrder;
     private Poll poll;
 
@@ -30,5 +31,13 @@ public class VoteOption {
 
     public void setPoll(Poll poll) {
         this.poll = poll;
+    }
+
+    private void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
