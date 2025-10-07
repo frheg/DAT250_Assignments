@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.834s</div>
+<div class="counter">0.666s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,9 +66,6 @@
 <li>
 <a href="#">Standard output</a>
 </li>
-<li>
-<a href="#">Standard error</a>
-</li>
 </ul>
 <div class="tab">
 <h2>Tests</h2>
@@ -82,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">fullScenario()</td>
-<td class="success">0.834s</td>
+<td class="success">0.666s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -90,8 +87,8 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>20:12:56.644 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [dat250.group2.poll.poll.pollRestClient]: pollRestClient does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-20:12:56.708 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration dat250.PollApplication for test class dat250.group2.poll.poll.pollRestClient
+<pre>2025-10-07T20:56:08.157+02:00  INFO 33162 --- [poll] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [dat250.group2.poll.poll.pollRestClient]: pollRestClient does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-07T20:56:08.159+02:00  INFO 33162 --- [poll] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration dat250.PollApplication for test class dat250.group2.poll.poll.pollRestClient
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -102,7 +99,7 @@
 
  :: Spring Boot ::                (v3.5.5)
 
-2025-10-07T20:12:56.908+02:00  WARN 13963 --- [poll] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+2025-10-07T20:56:08.180+02:00  WARN 33162 --- [poll] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -111,16 +108,39 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2025-10-07T20:12:56.914+02:00  INFO 13963 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : Starting pollRestClient using Java 21.0.8 with PID 13963 (started by fredrichegland in /Users/fredrichegland/Documents/UiB/MSc Software Engineering/DAT250_Avanserte_Programvareteknologier/DAT250 Code/DAT250_Assignments)
-2025-10-07T20:12:56.915+02:00  INFO 13963 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2025-10-07T20:12:57.415+02:00  INFO 13963 --- [poll] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2025-10-07T20:12:57.423+02:00  INFO 13963 --- [poll] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-07T20:12:57.423+02:00  INFO 13963 --- [poll] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-07T20:12:57.465+02:00  INFO 13963 --- [poll] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-07T20:12:57.466+02:00  INFO 13963 --- [poll] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 537 ms
-2025-10-07T20:12:57.644+02:00  INFO 13963 --- [poll] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2025-10-07T20:12:57.924+02:00  INFO 13963 --- [poll] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 64342 (http) with context path '/'
-2025-10-07T20:12:57.931+02:00  INFO 13963 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : Started pollRestClient in 1.164 seconds (process running for 1.782)
+2025-10-07T20:56:08.185+02:00  INFO 33162 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : Starting pollRestClient using Java 21.0.8 with PID 33162 (started by fredrichegland in /Users/fredrichegland/Documents/UiB/MSc Software Engineering/DAT250_Avanserte_Programvareteknologier/DAT250 Code/DAT250_Assignments)
+2025-10-07T20:56:08.186+02:00  INFO 33162 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-10-07T20:56:08.300+02:00  INFO 33162 --- [poll] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-07T20:56:08.303+02:00  INFO 33162 --- [poll] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2025-10-07T20:56:08.426+02:00  INFO 33162 --- [poll] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-10-07T20:56:08.435+02:00  INFO 33162 --- [poll] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-07T20:56:08.435+02:00  INFO 33162 --- [poll] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-10-07T20:56:08.461+02:00  INFO 33162 --- [poll] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-07T20:56:08.462+02:00  INFO 33162 --- [poll] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 274 ms
+2025-10-07T20:56:08.499+02:00  INFO 33162 --- [poll] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-07T20:56:08.501+02:00  INFO 33162 --- [poll] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:88628d32-1867-4e44-96aa-3cfc1301cd1c user=SA
+2025-10-07T20:56:08.501+02:00  INFO 33162 --- [poll] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-07T20:56:08.502+02:00  INFO 33162 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-07T20:56:08.515+02:00  INFO 33162 --- [poll] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-07T20:56:08.517+02:00  INFO 33162 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:88628d32-1867-4e44-96aa-3cfc1301cd1c]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.3.232
+	Default catalog/schema: 88628D32-1867-4E44-96AA-3CFC1301CD1C/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-07T20:56:08.548+02:00  INFO 33162 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-07T20:56:08.556+02:00  INFO 33162 --- [poll] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+RabbitMQ connection established successfully
+2025-10-07T20:56:08.583+02:00  WARN 33162 --- [poll] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-07T20:56:08.586+02:00  INFO 33162 --- [poll] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-07T20:56:08.780+02:00  INFO 33162 --- [poll] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 49218 (http) with context path '/'
+2025-10-07T20:56:08.783+02:00  INFO 33162 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : Started pollRestClient in 0.621 seconds (process running for 8.973)
 
 # Testing Redis Connection
 PING response: PONG
@@ -158,23 +178,22 @@ Poll results found in cache!
 Cached results: Option1:270,Option2:273,Option3:42
 Second call - Poll results found in cache!
 Cached results: Option1:270,Option2:273,Option3:42
-Cache TTL: 9 seconds
+Cache TTL: 3 seconds
 
 Redis Tests Completed Successfully!
-2025-10-07T20:13:02.760+02:00  INFO 13963 --- [poll] [0-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-07T20:13:02.760+02:00  INFO 13963 --- [poll] [0-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-07T20:13:02.761+02:00  INFO 13963 --- [poll] [0-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-</pre>
-</span>
-</div>
-<div class="tab">
-<h2>Standard error</h2>
-<span class="code">
-<pre>Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
-WARNING: A Java agent has been loaded dynamically (/Users/fredrichegland/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.7/fbf3d6d649ed37fc9e9c59480a05be0a26e3c2da/byte-buddy-agent-1.17.7.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
+
+Initializing RabbitMQ Service...
+	Sent 'Hello World!'
+	Received 'Hello World!'
+2025-10-07T20:56:13.031+02:00  INFO 33162 --- [poll] [0-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-07T20:56:13.031+02:00  INFO 33162 --- [poll] [0-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-07T20:56:13.032+02:00  INFO 33162 --- [poll] [0-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Started listening for votes on queue: poll_dc99cd8a-9775-4464-a0f4-24e5bc946acc_votes
+Created topic for poll: dc99cd8a-9775-4464-a0f4-24e5bc946acc
+Published vote event for poll dc99cd8a-9775-4464-a0f4-24e5bc946acc: ee5ceeb6-d3c9-4482-85e7-67be63831a06:user2
+Received vote event for poll dc99cd8a-9775-4464-a0f4-24e5bc946acc: ee5ceeb6-d3c9-4482-85e7-67be63831a06:user2
+Processing vote: optionId=ee5ceeb6-d3c9-4482-85e7-67be63831a06, username=user2, pollId=dc99cd8a-9775-4464-a0f4-24e5bc946acc
+Vote persisted for poll dc99cd8a-9775-4464-a0f4-24e5bc946acc on option ee5ceeb6-d3c9-4482-85e7-67be63831a06
 </pre>
 </span>
 </div>
@@ -186,7 +205,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Oct 7, 2025, 8:13:09 PM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Oct 7, 2025, 8:56:15 PM</p>
 </div>
 </div>
 </body>

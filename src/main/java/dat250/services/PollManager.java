@@ -6,6 +6,9 @@ import dat250.models.UserRequests.UserGetResponse;
 import dat250.models.UserRequests.UserUpdateRequest;
 import dat250.models.Vote;
 import dat250.models.VoteOption;
+import dat250.services.RabbitMQService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -22,6 +25,9 @@ public class PollManager {
     private final Map<String, Poll> polls = new HashMap<>();
     private final Map<String, Vote> votes = new HashMap<>();
     private final Map<String, VoteOption> voteOptions = new HashMap<>();
+
+    @Autowired
+    private RabbitMQService rabbitMQService;
 
     /**
      * User CRUD
@@ -125,6 +131,10 @@ public class PollManager {
         }
 
         polls.put(poll.getPollId(), poll);
+
+        // Create RabbitMQ topic for this poll
+        rabbitMQService.createPollTopic(poll.getPollId());
+
         return poll;
     }
 
@@ -257,6 +267,14 @@ public class PollManager {
         }
 
         votes.put(vote.getVoteId(), vote);
+
+        // Publish vote event to RabbitMQ
+        String username = vote.getUser() != null ? vote.getUser().getUsername() : null;
+        VoteOption option = voteOptions.get(vote.getVoteOptionId());
+        if (option != null) {
+            rabbitMQService.publishVoteEvent(option.getPollId(), vote.getVoteOptionId(), username);
+        }
+
         return vote;
     }
 

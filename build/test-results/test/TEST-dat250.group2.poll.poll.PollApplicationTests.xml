@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dat250.group2.poll.poll.PollApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-07T18:13:07.215Z" hostname="Fredrics-MacBook-Air.local" time="0.023">
+<testsuite name="dat250.group2.poll.poll.PollApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-07T18:56:07.835Z" hostname="Fredrics-MacBook-Air.local" time="0.317">
   <properties/>
-  <testcase name="contextLoads()" classname="dat250.group2.poll.poll.PollApplicationTests" time="0.023"/>
-  <system-out><![CDATA[2025-10-07T20:13:02.903+02:00  INFO 13963 --- [poll] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [dat250.group2.poll.poll.PollApplicationTests]: PollApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-10-07T20:13:02.904+02:00  INFO 13963 --- [poll] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration dat250.PollApplication for test class dat250.group2.poll.poll.PollApplicationTests
+  <testcase name="contextLoads()" classname="dat250.group2.poll.poll.PollApplicationTests" time="0.317"/>
+  <system-out><![CDATA[20:56:00.373 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [dat250.group2.poll.poll.PollApplicationTests]: PollApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:56:00.439 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration dat250.PollApplication for test class dat250.group2.poll.poll.PollApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,7 +14,7 @@
 
  :: Spring Boot ::                (v3.5.5)
 
-2025-10-07T20:13:02.917+02:00  WARN 13963 --- [poll] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+2025-10-07T20:56:00.673+02:00  WARN 33162 --- [poll] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -23,10 +23,34 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2025-10-07T20:13:02.918+02:00  INFO 13963 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : Starting PollApplicationTests using Java 21.0.8 with PID 13963 (started by fredrichegland in /Users/fredrichegland/Documents/UiB/MSc Software Engineering/DAT250_Avanserte_Programvareteknologier/DAT250 Code/DAT250_Assignments)
-2025-10-07T20:13:02.918+02:00  INFO 13963 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2025-10-07T20:13:03.044+02:00  INFO 13963 --- [poll] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2025-10-07T20:13:03.141+02:00  INFO 13963 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : Started PollApplicationTests in 0.233 seconds (process running for 6.992)
+2025-10-07T20:56:00.679+02:00  INFO 33162 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : Starting PollApplicationTests using Java 21.0.8 with PID 33162 (started by fredrichegland in /Users/fredrichegland/Documents/UiB/MSc Software Engineering/DAT250_Avanserte_Programvareteknologier/DAT250 Code/DAT250_Assignments)
+2025-10-07T20:56:00.680+02:00  INFO 33162 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2025-10-07T20:56:01.314+02:00  INFO 33162 --- [poll] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-07T20:56:01.350+02:00  INFO 33162 --- [poll] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 0 JPA repository interfaces.
+2025-10-07T20:56:01.762+02:00  INFO 33162 --- [poll] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-07T20:56:01.921+02:00  INFO 33162 --- [poll] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:5c6ac363-e5e6-490a-87c5-1a310467032d user=SA
+2025-10-07T20:56:01.923+02:00  INFO 33162 --- [poll] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-07T20:56:01.942+02:00  INFO 33162 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-07T20:56:01.975+02:00  INFO 33162 --- [poll] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.1.Final
+2025-10-07T20:56:02.281+02:00  INFO 33162 --- [poll] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-07T20:56:02.419+02:00  INFO 33162 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:5c6ac363-e5e6-490a-87c5-1a310467032d]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.3.232
+	Default catalog/schema: 5C6AC363-E5E6-490A-87C5-1A310467032D/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-07T20:56:03.048+02:00  INFO 33162 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-07T20:56:03.078+02:00  INFO 33162 --- [poll] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+RabbitMQ connection established successfully
+2025-10-07T20:56:03.412+02:00  WARN 33162 --- [poll] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-07T20:56:03.426+02:00  INFO 33162 --- [poll] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-07T20:56:03.730+02:00  INFO 33162 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : Started PollApplicationTests in 3.211 seconds (process running for 3.92)
 
 # Testing Redis Connection
 PING response: PONG
@@ -64,9 +88,18 @@ Poll results found in cache!
 Cached results: Option1:270,Option2:273,Option3:42
 Second call - Poll results found in cache!
 Cached results: Option1:270,Option2:273,Option3:42
-Cache TTL: 4 seconds
+Cache TTL: 8 seconds
 
 Redis Tests Completed Successfully!
+
+Initializing RabbitMQ Service...
+	Sent 'Hello World!'
+	Received 'Hello World!'
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/fredrichegland/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.7/fbf3d6d649ed37fc9e9c59480a05be0a26e3c2da/byte-buddy-agent-1.17.7.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
 </testsuite>

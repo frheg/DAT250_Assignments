@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.408s</div>
+<div class="counter">1.278s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,22 +79,22 @@
 </thead>
 <tr>
 <td class="success">inspectDatabase()</td>
-<td class="success">0.049s</td>
+<td class="success">0.063s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testOptions()</td>
-<td class="success">1.184s</td>
+<td class="success">0.740s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testUsers()</td>
-<td class="success">0.083s</td>
+<td class="success">0.378s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testVotes()</td>
-<td class="success">0.092s</td>
+<td class="success">0.097s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -102,10 +102,9 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-10-07T20:13:07.266+02:00  INFO 13963 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
-2025-10-07T20:13:07.304+02:00  INFO 13963 --- [poll] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.1.Final
-2025-10-07T20:13:07.452+02:00  WARN 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
-2025-10-07T20:13:07.584+02:00  INFO 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+<pre>2025-10-07T20:56:13.531+02:00  INFO 33162 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
+2025-10-07T20:56:13.550+02:00  WARN 33162 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-07T20:56:13.555+02:00  INFO 33162 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:h2:mem:polls;DB_CLOSE_DELAY=-1]
 	Database driver: H2 JDBC Driver
 	Database dialect: H2Dialect
@@ -117,10 +116,10 @@
 	Pool: DriverManagerConnectionProviderImpl
 	Minimum pool size: 1
 	Maximum pool size: 20
-2025-10-07T20:13:08.073+02:00  INFO 13963 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-07T20:13:08.426+02:00  INFO 13963 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
-2025-10-07T20:13:08.432+02:00  WARN 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
-2025-10-07T20:13:08.434+02:00  INFO 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-10-07T20:56:13.596+02:00  INFO 33162 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-07T20:56:14.270+02:00  INFO 33162 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
+2025-10-07T20:56:14.313+02:00  WARN 33162 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-07T20:56:14.340+02:00  INFO 33162 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:h2:mem:polls;DB_CLOSE_DELAY=-1]
 	Database driver: H2 JDBC Driver
 	Database dialect: H2Dialect
@@ -132,10 +131,10 @@
 	Pool: DriverManagerConnectionProviderImpl
 	Minimum pool size: 1
 	Maximum pool size: 20
-2025-10-07T20:13:08.463+02:00  INFO 13963 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-07T20:13:08.509+02:00  INFO 13963 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
-2025-10-07T20:13:08.520+02:00  WARN 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
-2025-10-07T20:13:08.522+02:00  INFO 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-10-07T20:56:14.549+02:00  INFO 33162 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-07T20:56:14.653+02:00  INFO 33162 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
+2025-10-07T20:56:14.663+02:00  WARN 33162 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-07T20:56:14.665+02:00  INFO 33162 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:h2:mem:polls;DB_CLOSE_DELAY=-1]
 	Database driver: H2 JDBC Driver
 	Database dialect: H2Dialect
@@ -147,10 +146,10 @@
 	Pool: DriverManagerConnectionProviderImpl
 	Minimum pool size: 1
 	Maximum pool size: 20
-2025-10-07T20:13:08.547+02:00  INFO 13963 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-07T20:13:08.601+02:00  INFO 13963 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
-2025-10-07T20:13:08.607+02:00  WARN 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
-2025-10-07T20:13:08.609+02:00  INFO 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-10-07T20:56:14.693+02:00  INFO 33162 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-07T20:56:14.749+02:00  INFO 33162 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
+2025-10-07T20:56:14.758+02:00  WARN 33162 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-07T20:56:14.760+02:00  INFO 33162 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:h2:mem:polls;DB_CLOSE_DELAY=-1]
 	Database driver: H2 JDBC Driver
 	Database dialect: H2Dialect
@@ -162,7 +161,7 @@
 	Pool: DriverManagerConnectionProviderImpl
 	Minimum pool size: 1
 	Maximum pool size: 20
-2025-10-07T20:13:08.636+02:00  INFO 13963 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-07T20:56:14.788+02:00  INFO 33162 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 
 ----- TABLES IN H2 -----
 Current schema: PUBLIC
@@ -204,7 +203,7 @@ Table: VOTEOPTION
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Oct 7, 2025, 8:13:09 PM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Oct 7, 2025, 8:56:15 PM</p>
 </div>
 </div>
 </body>
