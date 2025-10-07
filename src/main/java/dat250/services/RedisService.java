@@ -4,14 +4,23 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import redis.clients.jedis.UnifiedJedis;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 public class RedisService {
 
-    UnifiedJedis jedis = new UnifiedJedis("redis://localhost:6379");
+    @Value("${redis.host}")
+    private String redisHost;
+
+    @Value("${redis.port}")
+    private int redisPort;
+
+    UnifiedJedis jedis;
 
     public void runRedis() {
+
+        jedis = new UnifiedJedis("redis://" + redisHost + ":" + redisPort);
 
         System.out.println("\n# Testing Redis Connection");
 

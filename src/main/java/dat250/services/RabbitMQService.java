@@ -6,6 +6,7 @@ import dat250.models.User;
 import dat250.services.PollManager;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,18 @@ import java.util.concurrent.TimeoutException;
 public class RabbitMQService {
     private static final String EXCHANGE_NAME = "poll_events";
 
+    @Value("${rabbitmq.host}")
+    private String rabbitmqHost;
+
+    @Value("${rabbitmq.port}")
+    private int rabbitmqPort;
+
+    @Value("${rabbitmq.username}")
+    private String rabbitmqUsername;
+
+    @Value("${rabbitmq.password}")
+    private String rabbitmqPassword;
+
     private Connection connection;
     private Channel channel;
 
@@ -31,10 +44,10 @@ public class RabbitMQService {
     public void init() {
         try {
             ConnectionFactory factory = new ConnectionFactory();
-            factory.setHost("localhost");
-            factory.setPort(5672);
-            factory.setUsername("guest");
-            factory.setPassword("guest");
+            factory.setHost(rabbitmqHost);
+            factory.setPort(rabbitmqPort);
+            factory.setUsername(rabbitmqUsername);
+            factory.setPassword(rabbitmqPassword);
 
             connection = factory.newConnection();
             channel = connection.createChannel();
