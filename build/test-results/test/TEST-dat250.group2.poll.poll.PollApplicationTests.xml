@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dat250.group2.poll.poll.PollApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-07T17:57:01.054Z" hostname="Fredrics-MacBook-Air.local" time="0.563">
+  <properties/>
+  <testcase name="contextLoads()" classname="dat250.group2.poll.poll.PollApplicationTests" time="0.563"/>
+  <system-out><![CDATA[19:56:55.739 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [dat250.group2.poll.poll.PollApplicationTests]: PollApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:56:55.824 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration dat250.PollApplication for test class dat250.group2.poll.poll.PollApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.5)
+
+2025-10-07T19:56:56.054+02:00  WARN 7182 --- [poll] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/fredrichegland/.gradle/caches/modules-2/files-2.1/org.json/json/20250517/d67181bbd819ccceb929b580a4e2fcb0c8b17cd8/json-20250517.jar!/org/json/JSONObject.class
+	jar:file:/Users/fredrichegland/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-10-07T19:56:56.063+02:00  INFO 7182 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : Starting PollApplicationTests using Java 21.0.8 with PID 7182 (started by fredrichegland in /Users/fredrichegland/Documents/UiB/MSc Software Engineering/DAT250_Avanserte_Programvareteknologier/DAT250 Code/DAT250_Assignments)
+2025-10-07T19:56:56.063+02:00  INFO 7182 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2025-10-07T19:56:56.739+02:00  INFO 7182 --- [poll] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-07T19:56:56.937+02:00  INFO 7182 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : Started PollApplicationTests in 1.038 seconds (process running for 1.736)
+
+# Testing Redis Connection
+PING response: PONG
+
+# Basic SET/GET Operations
+First user SET, total users: bob
+Second user SET, total users: alice
+
+# Testing Expiration
+TTL for temp_user: 3 seconds
+TTL after expiration: -2
+Expired user value: null
+
+# Use Case 1: Tracking Logged-in Users with Set
+1. Initial state: no user is logged in: []
+2. User "alice" logs in: [alice]
+3. User "bob" logs in: [bob, alice]
+4. User "alice" logs off: [bob]
+5. User "eve" logs in: [bob, eve]
+
+# Use Case 2: Poll Data with Hash Operations
+Poll Title: Pineapple on Pizza?
+Option 1: Yes, yammy! - Votes: 269
+Option 2: Mamma mia, nooooo! - Votes: 268
+Option 3: I do not really care ... - Votes: 42
+
+# Testing Vote Increment
+Before increment - Option 1 votes: 269
+After incrementing by 1 - Option 1 votes: 270
+Before increment - Option 2 votes: 268
+After incrementing by 5 - Option 2 votes: 273
+
+# Simple Cache Implementation Test
+Poll results not in cache, simulating database query...
+Results cached: Option1:270,Option2:273,Option3:42
+Second call - Poll results found in cache!
+Cached results: Option1:270,Option2:273,Option3:42
+Cache TTL: 30 seconds
+
+Redis Tests Completed Successfully!
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/fredrichegland/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.7/fbf3d6d649ed37fc9e9c59480a05be0a26e3c2da/byte-buddy-agent-1.17.7.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

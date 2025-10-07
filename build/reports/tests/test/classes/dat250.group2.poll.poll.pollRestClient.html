@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - pollRestClient</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>pollRestClient</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/dat250.group2.poll.poll.html">dat250.group2.poll.poll</a> &gt; pollRestClient</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.268s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Failed tests</a>
+</li>
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="fullScenario()"></a>
+<h3 class="failures">fullScenario()</h3>
+<span class="code">
+<pre>java.lang.AssertionError: 
+Expecting ArrayList:
+  [null]
+to contain:
+  [&quot;Dummy&quot;]
+but could not find the following element(s):
+  [&quot;Dummy&quot;]
+
+	at dat250.group2.poll.poll.pollRestClient.fullScenario(pollRestClient.java:61)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</pre>
+</span>
+</div>
+</div>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">fullScenario()</td>
+<td class="failures">0.268s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2025-10-07T19:57:01.622+02:00  INFO 7182 --- [poll] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [dat250.group2.poll.poll.pollRestClient]: pollRestClient does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-07T19:57:01.623+02:00  INFO 7182 --- [poll] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration dat250.PollApplication for test class dat250.group2.poll.poll.pollRestClient
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.5)
+
+2025-10-07T19:57:01.639+02:00  WARN 7182 --- [poll] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/fredrichegland/.gradle/caches/modules-2/files-2.1/org.json/json/20250517/d67181bbd819ccceb929b580a4e2fcb0c8b17cd8/json-20250517.jar!/org/json/JSONObject.class
+	jar:file:/Users/fredrichegland/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-10-07T19:57:01.640+02:00  INFO 7182 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : Starting pollRestClient using Java 21.0.8 with PID 7182 (started by fredrichegland in /Users/fredrichegland/Documents/UiB/MSc Software Engineering/DAT250_Avanserte_Programvareteknologier/DAT250 Code/DAT250_Assignments)
+2025-10-07T19:57:01.640+02:00  INFO 7182 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-10-07T19:57:01.881+02:00  INFO 7182 --- [poll] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-10-07T19:57:01.891+02:00  INFO 7182 --- [poll] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-07T19:57:01.891+02:00  INFO 7182 --- [poll] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-10-07T19:57:01.929+02:00  INFO 7182 --- [poll] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-07T19:57:01.930+02:00  INFO 7182 --- [poll] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 289 ms
+2025-10-07T19:57:02.006+02:00  INFO 7182 --- [poll] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-07T19:57:02.263+02:00  INFO 7182 --- [poll] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 63785 (http) with context path '/'
+2025-10-07T19:57:02.266+02:00  INFO 7182 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : Started pollRestClient in 0.64 seconds (process running for 7.065)
+
+# Testing Redis Connection
+PING response: PONG
+
+# Basic SET/GET Operations
+First user SET, total users: bob
+Second user SET, total users: alice
+
+# Testing Expiration
+TTL for temp_user: 3 seconds
+TTL after expiration: -2
+Expired user value: null
+
+# Use Case 1: Tracking Logged-in Users with Set
+1. Initial state: no user is logged in: []
+2. User &quot;alice&quot; logs in: [alice]
+3. User &quot;bob&quot; logs in: [bob, alice]
+4. User &quot;alice&quot; logs off: [bob]
+5. User &quot;eve&quot; logs in: [bob, eve]
+
+# Use Case 2: Poll Data with Hash Operations
+Poll Title: Pineapple on Pizza?
+Option 1: Yes, yammy! - Votes: 269
+Option 2: Mamma mia, nooooo! - Votes: 268
+Option 3: I do not really care ... - Votes: 42
+
+# Testing Vote Increment
+Before increment - Option 1 votes: 269
+After incrementing by 1 - Option 1 votes: 270
+Before increment - Option 2 votes: 268
+After incrementing by 5 - Option 2 votes: 273
+
+# Simple Cache Implementation Test
+Poll results found in cache!
+Cached results: Option1:270,Option2:273,Option3:42
+Second call - Poll results found in cache!
+Cached results: Option1:270,Option2:273,Option3:42
+Cache TTL: 25 seconds
+
+Redis Tests Completed Successfully!
+2025-10-07T19:57:06.453+02:00  INFO 7182 --- [poll] [0-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-07T19:57:06.454+02:00  INFO 7182 --- [poll] [0-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-07T19:57:06.455+02:00  INFO 7182 --- [poll] [0-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Oct 7, 2025, 7:57:08 PM</p>
+</div>
+</div>
+</body>
+</html>

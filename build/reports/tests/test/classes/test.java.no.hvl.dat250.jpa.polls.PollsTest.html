@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PollsTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PollsTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/test.java.no.hvl.dat250.jpa.polls.html">test.java.no.hvl.dat250.jpa.polls</a> &gt; PollsTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.717s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">inspectDatabase()</td>
+<td class="success">0.050s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testOptions()</td>
+<td class="success">1.495s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testUsers()</td>
+<td class="success">0.091s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testVotes()</td>
+<td class="success">0.081s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2025-10-07T19:57:06.615+02:00  INFO 7182 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
+2025-10-07T19:57:06.694+02:00  INFO 7182 --- [poll] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.1.Final
+2025-10-07T19:57:06.934+02:00  WARN 7182 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-07T19:57:07.134+02:00  INFO 7182 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:polls;DB_CLOSE_DELAY=-1]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.3.232
+	Default catalog/schema: POLLS/PUBLIC
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: 100
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2025-10-07T19:57:07.689+02:00  INFO 7182 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-07T19:57:08.093+02:00  INFO 7182 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
+2025-10-07T19:57:08.100+02:00  WARN 7182 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-07T19:57:08.101+02:00  INFO 7182 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:polls;DB_CLOSE_DELAY=-1]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.3.232
+	Default catalog/schema: POLLS/PUBLIC
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: 100
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2025-10-07T19:57:08.134+02:00  INFO 7182 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-07T19:57:08.184+02:00  INFO 7182 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
+2025-10-07T19:57:08.190+02:00  WARN 7182 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-07T19:57:08.192+02:00  INFO 7182 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:polls;DB_CLOSE_DELAY=-1]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.3.232
+	Default catalog/schema: POLLS/PUBLIC
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: 100
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2025-10-07T19:57:08.213+02:00  INFO 7182 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-07T19:57:08.266+02:00  INFO 7182 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
+2025-10-07T19:57:08.272+02:00  WARN 7182 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-07T19:57:08.273+02:00  INFO 7182 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:polls;DB_CLOSE_DELAY=-1]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.3.232
+	Default catalog/schema: POLLS/PUBLIC
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: 100
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2025-10-07T19:57:08.297+02:00  INFO 7182 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+
+----- TABLES IN H2 -----
+Current schema: PUBLIC
+Found tables: 4
+Table: POLL
+  Column: PUBLICACCESS (DATA_TYPE=BOOLEAN)
+  Column: CREATEDBY_ID (DATA_TYPE=BIGINT)
+  Column: ID (DATA_TYPE=BIGINT)
+  Column: PUBLISHEDAT (DATA_TYPE=TIMESTAMP WITH TIME ZONE)
+  Column: VALIDUNTIL (DATA_TYPE=TIMESTAMP WITH TIME ZONE)
+  Column: QUESTION (DATA_TYPE=CHARACTER VARYING)
+
+Table: USERS
+  Column: ID (DATA_TYPE=BIGINT)
+  Column: EMAIL (DATA_TYPE=CHARACTER VARYING)
+  Column: PASSWORD (DATA_TYPE=CHARACTER VARYING)
+  Column: USERNAME (DATA_TYPE=CHARACTER VARYING)
+
+Table: VOTE
+  Column: ID (DATA_TYPE=BIGINT)
+  Column: PUBLISHEDAT (DATA_TYPE=TIMESTAMP WITH TIME ZONE)
+  Column: VOTEDBY_ID (DATA_TYPE=BIGINT)
+  Column: VOTESON_ID (DATA_TYPE=BIGINT)
+
+Table: VOTEOPTION
+  Column: PRESENTATIONORDER (DATA_TYPE=INTEGER)
+  Column: ID (DATA_TYPE=BIGINT)
+  Column: POLL_ID (DATA_TYPE=BIGINT)
+  Column: CAPTION (DATA_TYPE=CHARACTER VARYING)
+
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Oct 7, 2025, 7:57:08 PM</p>
+</div>
+</div>
+</body>
+</html>
