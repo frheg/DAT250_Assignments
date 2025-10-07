@@ -1,0 +1,45 @@
+meta {
+  name: Create Poll
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base_url}}/polls
+  body: json
+  auth: none
+}
+
+headers {
+  ~Content-Type: application/json
+}
+
+body:json {
+  {
+    "question": "Whats your favorite programming language?",
+    "createdBy": {
+      "userId": "user1"
+    },
+    "publicAccess": true,
+    "options": [
+      { "caption": "Java" },
+      { "caption": "Python" },
+      { "caption": "JavaScript" }
+    ]
+  }
+}
+
+tests {
+  test("should create a poll", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("poll data should be correct", function () {
+    const resBody = res.getBody();
+    expect(resBody.pollId).to.not.be.undefined;
+    expect(resBody.question).to.equal('Whats your favorite programming language?');
+    expect(resBody.options).to.be.an('array').of.length(3);
+    bru.setVar('pollId', resBody.pollId);
+    bru.setVar('voteOptionId', resBody.options[0].optionId);
+  });
+}

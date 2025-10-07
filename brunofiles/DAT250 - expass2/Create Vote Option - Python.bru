@@ -1,0 +1,20 @@
+meta {
+  name: Create Vote Option - Python
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:8080/voteoptions
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "optionId": "option2",
+    "caption": "Python",
+    "pollId": "poll1",
+    "votes": []
+  }
+}

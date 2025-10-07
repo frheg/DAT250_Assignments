@@ -1,0 +1,38 @@
+meta {
+  name: Create Vote
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{base_url}}/votes
+  body: json
+  auth: none
+}
+
+headers {
+  ~Content-Type: application/json
+}
+
+body:json {
+  {
+    "user": {
+      "userId": "{{userId}}"
+    },
+    "voteOptionId": "{{voteOptionId}}"
+  }
+}
+
+tests {
+  test("should create a vote", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("vote data should be correct", function () {
+    const resBody = res.getBody();
+    expect(resBody.voteId).to.not.be.undefined;
+    expect(resBody.user.userId).to.equal(bru.getVar('userId'));
+    expect(resBody.voteOptionId).to.equal(bru.getVar('voteOptionId'));
+    bru.setVar('voteId', resBody.voteId);
+  });
+}

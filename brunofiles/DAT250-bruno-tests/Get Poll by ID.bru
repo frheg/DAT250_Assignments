@@ -1,0 +1,22 @@
+meta {
+  name: Get Poll by ID
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base_url}}/polls/{{pollId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("should get poll by ID", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("poll ID should match", function () {
+    const resBody = res.getBody();
+    expect(resBody.pollId).to.equal(bru.getVar('pollId'));
+  });
+}

@@ -1,0 +1,32 @@
+meta {
+  name: Create User
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "userId": "user1",
+    "email": "john.doe@example.com",
+    "password": "strongpassword123"
+  }
+}
+
+tests {
+  test("should be able to create user", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("should return json with correct user data", function () {
+    const resBody = res.getBody();
+    expect(resBody).to.have.property('userId');
+    expect(resBody.email).to.equal('john.doe@example.com');
+    bru.setVar('userId', resBody.userId);
+  });
+}

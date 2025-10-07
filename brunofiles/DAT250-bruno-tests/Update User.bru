@@ -1,0 +1,33 @@
+meta {
+  name: Update User
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/users/{{userId}}
+  body: json
+  auth: none
+}
+
+headers {
+  ~Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "jane.doe@example.com",
+    "password": "newsecurepassword456"
+  }
+}
+
+tests {
+  test("should update user", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("email should be updated", function () {
+    const resBody = res.getBody();
+    expect(resBody.email).to.equal('jane.doe@example.com');
+  });
+}

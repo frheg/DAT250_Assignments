@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "DAT250 - expass2",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

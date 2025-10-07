@@ -1,0 +1,22 @@
+meta {
+  name: Get Vote by ID
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{base_url}}/votes/{{voteId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("should get vote by ID", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("vote ID should match", function () {
+    const resBody = res.getBody();
+    expect(resBody.voteId).to.equal(bru.getVar('voteId'));
+  });
+}

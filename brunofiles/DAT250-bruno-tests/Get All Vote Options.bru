@@ -1,0 +1,21 @@
+meta {
+  name: Get All Vote Options
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{base_url}}/voteoptions
+  body: none
+  auth: none
+}
+
+tests {
+  test("should get all vote options", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("should return an array of vote options", function () {
+    expect(res.getBody()).to.be.an('array');
+  });
+}

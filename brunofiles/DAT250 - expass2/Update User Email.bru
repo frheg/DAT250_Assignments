@@ -1,0 +1,17 @@
+meta {
+  name: Update User Email
+  type: http
+  seq: 13
+}
+
+put {
+  url: http://localhost:8080/users/user1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "newemail@example.com"
+  }
+}

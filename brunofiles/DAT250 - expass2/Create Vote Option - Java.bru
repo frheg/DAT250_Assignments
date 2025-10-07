@@ -1,0 +1,20 @@
+meta {
+  name: Create Vote Option - Java
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8080/voteoptions
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "optionId": "option1",
+    "caption": "Java",
+    "pollId": "poll1",
+    "votes": []
+  }
+}

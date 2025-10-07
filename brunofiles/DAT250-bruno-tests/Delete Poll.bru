@@ -1,0 +1,17 @@
+meta {
+  name: Delete Poll
+  type: http
+  seq: 13
+}
+
+delete {
+  url: {{base_url}}/polls/{{pollId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("should delete poll", function () {
+    expect(res.getStatus()).to.equal(204);
+  });
+}

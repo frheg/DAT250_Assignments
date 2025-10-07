@@ -1,0 +1,23 @@
+meta {
+  name: User2 Changes Vote to Python
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://localhost:8080/votes/vote1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "voteId": "vote1",
+    "user": {
+      "userId": "user2",
+      "email": "user2@example.com",
+      "password": "password456"
+    },
+    "voteOptionId": "option2"
+  }
+}

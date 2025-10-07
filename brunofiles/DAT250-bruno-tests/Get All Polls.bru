@@ -1,0 +1,21 @@
+meta {
+  name: Get All Polls
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base_url}}/polls
+  body: none
+  auth: none
+}
+
+tests {
+  test("should get all polls", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("should return an array of polls", function () {
+    expect(res.getBody()).to.be.an('array');
+  });
+}

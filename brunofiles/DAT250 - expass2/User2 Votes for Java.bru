@@ -1,0 +1,23 @@
+meta {
+  name: User2 Votes for Java
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:8080/votes
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "voteId": "vote1",
+    "user": {
+      "userId": "user2",
+      "email": "user2@example.com",
+      "password": "password456"
+    },
+    "voteOptionId": "option1"
+  }
+}

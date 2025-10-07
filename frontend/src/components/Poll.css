@@ -1,0 +1,63 @@
+/** CSS created by ChatGPT */
+
+.poll-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    max-width: 600px;
+}
+
+.poll-header {
+    margin-bottom: 16px;
+}
+
+.poll-question {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+.poll-meta {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.poll-meta span {
+    font-weight: 500;
+}
+
+.poll-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.poll-option {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px;
+    transition: transform 0.2s;
+}
+
+.option-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    * {
+        margin: 0;
+    }
+
+}

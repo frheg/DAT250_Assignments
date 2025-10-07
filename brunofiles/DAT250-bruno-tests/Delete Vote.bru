@@ -1,0 +1,17 @@
+meta {
+  name: Delete Vote
+  type: http
+  seq: 17
+}
+
+delete {
+  url: {{base_url}}/votes/{{voteId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("should delete vote", function () {
+    expect(res.getStatus()).to.equal(204);
+  });
+}

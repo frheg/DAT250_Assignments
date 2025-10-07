@@ -1,0 +1,55 @@
+/** CSS created by ChatGPT */
+
+/* Popup container */
+.popup-content {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    font-family: sans-serif;
+    animation: fadeInScale 0.25s ease-out;
+}
+
+/* Popup overlay */
+.popup-overlay {
+    background: rgba(0,0,0,0.4);
+}
+
+/* Title */
+#popup_title {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Close button */
+#save {
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0077ff;
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#save:hover {
+    background-color: #005fd1;
+}
+
+/* Animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

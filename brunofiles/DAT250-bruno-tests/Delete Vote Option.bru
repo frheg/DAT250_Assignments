@@ -1,0 +1,17 @@
+meta {
+  name: Delete Vote Option
+  type: http
+  seq: 12
+}
+
+delete {
+  url: {{base_url}}/voteoptions/{{voteOptionId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("should delete vote option", function () {
+    expect(res.getStatus()).to.equal(204);
+  });
+}
