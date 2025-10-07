@@ -46,7 +46,7 @@ public class PollManager {
 
         UserGetResponse userGetResponse = new UserGetResponse();
         userGetResponse.setEmail(user.getEmail());
-        userGetResponse.setUserId(user.getUsername());
+        userGetResponse.setUsername(user.getUsername());
         return userGetResponse;
     }
 
@@ -56,7 +56,7 @@ public class PollManager {
         for (User user : users.values()) {
             UserGetResponse response = new UserGetResponse();
             response.setEmail(user.getEmail());
-            response.setUserId(user.getUsername());
+            response.setUsername(user.getUsername());
             restrictedUsers.add(response);
         }
         return restrictedUsers;

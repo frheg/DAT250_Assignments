@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.563s</div>
+<div class="counter">0.023s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,9 +66,6 @@
 <li>
 <a href="#">Standard output</a>
 </li>
-<li>
-<a href="#">Standard error</a>
-</li>
 </ul>
 <div class="tab">
 <h2>Tests</h2>
@@ -82,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">contextLoads()</td>
-<td class="success">0.563s</td>
+<td class="success">0.023s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -90,8 +87,8 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>19:56:55.739 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [dat250.group2.poll.poll.PollApplicationTests]: PollApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-19:56:55.824 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration dat250.PollApplication for test class dat250.group2.poll.poll.PollApplicationTests
+<pre>2025-10-07T20:13:02.903+02:00  INFO 13963 --- [poll] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [dat250.group2.poll.poll.PollApplicationTests]: PollApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-07T20:13:02.904+02:00  INFO 13963 --- [poll] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration dat250.PollApplication for test class dat250.group2.poll.poll.PollApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -102,7 +99,7 @@
 
  :: Spring Boot ::                (v3.5.5)
 
-2025-10-07T19:56:56.054+02:00  WARN 7182 --- [poll] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+2025-10-07T20:13:02.917+02:00  WARN 13963 --- [poll] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -111,10 +108,10 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2025-10-07T19:56:56.063+02:00  INFO 7182 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : Starting PollApplicationTests using Java 21.0.8 with PID 7182 (started by fredrichegland in /Users/fredrichegland/Documents/UiB/MSc Software Engineering/DAT250_Avanserte_Programvareteknologier/DAT250 Code/DAT250_Assignments)
-2025-10-07T19:56:56.063+02:00  INFO 7182 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2025-10-07T19:56:56.739+02:00  INFO 7182 --- [poll] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2025-10-07T19:56:56.937+02:00  INFO 7182 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : Started PollApplicationTests in 1.038 seconds (process running for 1.736)
+2025-10-07T20:13:02.918+02:00  INFO 13963 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : Starting PollApplicationTests using Java 21.0.8 with PID 13963 (started by fredrichegland in /Users/fredrichegland/Documents/UiB/MSc Software Engineering/DAT250_Avanserte_Programvareteknologier/DAT250 Code/DAT250_Assignments)
+2025-10-07T20:13:02.918+02:00  INFO 13963 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-10-07T20:13:03.044+02:00  INFO 13963 --- [poll] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-07T20:13:03.141+02:00  INFO 13963 --- [poll] [    Test worker] d.group2.poll.poll.PollApplicationTests  : Started PollApplicationTests in 0.233 seconds (process running for 6.992)
 
 # Testing Redis Connection
 PING response: PONG
@@ -148,24 +145,13 @@ Before increment - Option 2 votes: 268
 After incrementing by 5 - Option 2 votes: 273
 
 # Simple Cache Implementation Test
-Poll results not in cache, simulating database query...
-Results cached: Option1:270,Option2:273,Option3:42
+Poll results found in cache!
+Cached results: Option1:270,Option2:273,Option3:42
 Second call - Poll results found in cache!
 Cached results: Option1:270,Option2:273,Option3:42
-Cache TTL: 30 seconds
+Cache TTL: 4 seconds
 
 Redis Tests Completed Successfully!
-</pre>
-</span>
-</div>
-<div class="tab">
-<h2>Standard error</h2>
-<span class="code">
-<pre>Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
-WARNING: A Java agent has been loaded dynamically (/Users/fredrichegland/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.7/fbf3d6d649ed37fc9e9c59480a05be0a26e3c2da/byte-buddy-agent-1.17.7.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
 </pre>
 </span>
 </div>
@@ -177,7 +163,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.3</a> at Oct 7, 2025, 7:57:08 PM</p>
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at Oct 7, 2025, 8:13:09 PM</p>
 </div>
 </div>
 </body>

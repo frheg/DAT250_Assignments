@@ -1,4 +1,4 @@
-package test.java.no.hvl.dat250.jpa.polls;
+package no.hvl.dat250.jpa.polls;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

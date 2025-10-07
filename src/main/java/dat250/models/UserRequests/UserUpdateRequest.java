@@ -6,7 +6,8 @@ public class UserUpdateRequest {
     private String password;
 
     // getters and setters
-    public UserUpdateRequest() {}
+    public UserUpdateRequest() {
+    }
 
     public String getEmail() {
         return email;

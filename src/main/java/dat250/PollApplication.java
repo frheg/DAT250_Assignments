@@ -28,7 +28,7 @@ public class PollApplication {
 
 		@EventListener(ApplicationReadyEvent.class)
 		public void runAfterStartup() {
-			redisService.runRedisTests();
+			redisService.runRedis();
 		}
 	}
 }

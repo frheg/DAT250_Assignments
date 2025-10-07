@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="no.hvl.dat250.jpa.polls.PollsTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-10-07T18:13:07.241Z" hostname="Fredrics-MacBook-Air.local" time="1.409">
+  <properties/>
+  <testcase name="testOptions()" classname="no.hvl.dat250.jpa.polls.PollsTest" time="1.184"/>
+  <testcase name="testUsers()" classname="no.hvl.dat250.jpa.polls.PollsTest" time="0.083"/>
+  <testcase name="testVotes()" classname="no.hvl.dat250.jpa.polls.PollsTest" time="0.092"/>
+  <testcase name="inspectDatabase()" classname="no.hvl.dat250.jpa.polls.PollsTest" time="0.049"/>
+  <system-out><![CDATA[2025-10-07T20:13:07.266+02:00  INFO 13963 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
+2025-10-07T20:13:07.304+02:00  INFO 13963 --- [poll] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.1.Final
+2025-10-07T20:13:07.452+02:00  WARN 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-07T20:13:07.584+02:00  INFO 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:polls;DB_CLOSE_DELAY=-1]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.3.232
+	Default catalog/schema: POLLS/PUBLIC
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: 100
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2025-10-07T20:13:08.073+02:00  INFO 13963 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-07T20:13:08.426+02:00  INFO 13963 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
+2025-10-07T20:13:08.432+02:00  WARN 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-07T20:13:08.434+02:00  INFO 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:polls;DB_CLOSE_DELAY=-1]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.3.232
+	Default catalog/schema: POLLS/PUBLIC
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: 100
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2025-10-07T20:13:08.463+02:00  INFO 13963 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-07T20:13:08.509+02:00  INFO 13963 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
+2025-10-07T20:13:08.520+02:00  WARN 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-07T20:13:08.522+02:00  INFO 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:polls;DB_CLOSE_DELAY=-1]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.3.232
+	Default catalog/schema: POLLS/PUBLIC
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: 100
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2025-10-07T20:13:08.547+02:00  INFO 13963 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-07T20:13:08.601+02:00  INFO 13963 --- [poll] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: polls]
+2025-10-07T20:13:08.607+02:00  WARN 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2025-10-07T20:13:08.609+02:00  INFO 13963 --- [poll] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:polls;DB_CLOSE_DELAY=-1]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.3.232
+	Default catalog/schema: POLLS/PUBLIC
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: 100
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2025-10-07T20:13:08.636+02:00  INFO 13963 --- [poll] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+
+----- TABLES IN H2 -----
+Current schema: PUBLIC
+Found tables: 4
+Table: POLL
+  Column: PUBLICACCESS (DATA_TYPE=BOOLEAN)
+  Column: CREATEDBY_ID (DATA_TYPE=BIGINT)
+  Column: ID (DATA_TYPE=BIGINT)
+  Column: PUBLISHEDAT (DATA_TYPE=TIMESTAMP WITH TIME ZONE)
+  Column: VALIDUNTIL (DATA_TYPE=TIMESTAMP WITH TIME ZONE)
+  Column: QUESTION (DATA_TYPE=CHARACTER VARYING)
+
+Table: USERS
+  Column: ID (DATA_TYPE=BIGINT)
+  Column: EMAIL (DATA_TYPE=CHARACTER VARYING)
+  Column: PASSWORD (DATA_TYPE=CHARACTER VARYING)
+  Column: USERNAME (DATA_TYPE=CHARACTER VARYING)
+
+Table: VOTE
+  Column: ID (DATA_TYPE=BIGINT)
+  Column: PUBLISHEDAT (DATA_TYPE=TIMESTAMP WITH TIME ZONE)
+  Column: VOTEDBY_ID (DATA_TYPE=BIGINT)
+  Column: VOTESON_ID (DATA_TYPE=BIGINT)
+
+Table: VOTEOPTION
+  Column: PRESENTATIONORDER (DATA_TYPE=INTEGER)
+  Column: ID (DATA_TYPE=BIGINT)
+  Column: POLL_ID (DATA_TYPE=BIGINT)
+  Column: CAPTION (DATA_TYPE=CHARACTER VARYING)
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

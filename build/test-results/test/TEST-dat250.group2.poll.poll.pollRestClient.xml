@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dat250.group2.poll.poll.pollRestClient" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-10-07T17:57:06.328Z" hostname="Fredrics-MacBook-Air.local" time="0.268">
+<testsuite name="dat250.group2.poll.poll.pollRestClient" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-07T18:13:02.067Z" hostname="Fredrics-MacBook-Air.local" time="0.834">
   <properties/>
-  <testcase name="fullScenario()" classname="dat250.group2.poll.poll.pollRestClient" time="0.268">
-    <failure message="java.lang.AssertionError: &#10;Expecting ArrayList:&#10;  [null]&#10;to contain:&#10;  [&quot;Dummy&quot;]&#10;but could not find the following element(s):&#10;  [&quot;Dummy&quot;]&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expecting ArrayList:
-  [null]
-to contain:
-  [&quot;Dummy&quot;]
-but could not find the following element(s):
-  [&quot;Dummy&quot;]
-
-	at dat250.group2.poll.poll.pollRestClient.fullScenario(pollRestClient.java:61)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-</failure>
-  </testcase>
-  <system-out><![CDATA[2025-10-07T19:57:01.622+02:00  INFO 7182 --- [poll] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [dat250.group2.poll.poll.pollRestClient]: pollRestClient does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-10-07T19:57:01.623+02:00  INFO 7182 --- [poll] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration dat250.PollApplication for test class dat250.group2.poll.poll.pollRestClient
+  <testcase name="fullScenario()" classname="dat250.group2.poll.poll.pollRestClient" time="0.834"/>
+  <system-out><![CDATA[20:12:56.644 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [dat250.group2.poll.poll.pollRestClient]: pollRestClient does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:12:56.708 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration dat250.PollApplication for test class dat250.group2.poll.poll.pollRestClient
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -28,7 +14,7 @@ but could not find the following element(s):
 
  :: Spring Boot ::                (v3.5.5)
 
-2025-10-07T19:57:01.639+02:00  WARN 7182 --- [poll] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+2025-10-07T20:12:56.908+02:00  WARN 13963 --- [poll] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -37,16 +23,16 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2025-10-07T19:57:01.640+02:00  INFO 7182 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : Starting pollRestClient using Java 21.0.8 with PID 7182 (started by fredrichegland in /Users/fredrichegland/Documents/UiB/MSc Software Engineering/DAT250_Avanserte_Programvareteknologier/DAT250 Code/DAT250_Assignments)
-2025-10-07T19:57:01.640+02:00  INFO 7182 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : No active profile set, falling back to 1 default profile: "default"
-2025-10-07T19:57:01.881+02:00  INFO 7182 --- [poll] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2025-10-07T19:57:01.891+02:00  INFO 7182 --- [poll] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-07T19:57:01.891+02:00  INFO 7182 --- [poll] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-10-07T19:57:01.929+02:00  INFO 7182 --- [poll] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-07T19:57:01.930+02:00  INFO 7182 --- [poll] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 289 ms
-2025-10-07T19:57:02.006+02:00  INFO 7182 --- [poll] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2025-10-07T19:57:02.263+02:00  INFO 7182 --- [poll] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 63785 (http) with context path '/'
-2025-10-07T19:57:02.266+02:00  INFO 7182 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : Started pollRestClient in 0.64 seconds (process running for 7.065)
+2025-10-07T20:12:56.914+02:00  INFO 13963 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : Starting pollRestClient using Java 21.0.8 with PID 13963 (started by fredrichegland in /Users/fredrichegland/Documents/UiB/MSc Software Engineering/DAT250_Avanserte_Programvareteknologier/DAT250 Code/DAT250_Assignments)
+2025-10-07T20:12:56.915+02:00  INFO 13963 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : No active profile set, falling back to 1 default profile: "default"
+2025-10-07T20:12:57.415+02:00  INFO 13963 --- [poll] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-10-07T20:12:57.423+02:00  INFO 13963 --- [poll] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-07T20:12:57.423+02:00  INFO 13963 --- [poll] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-10-07T20:12:57.465+02:00  INFO 13963 --- [poll] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-07T20:12:57.466+02:00  INFO 13963 --- [poll] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 537 ms
+2025-10-07T20:12:57.644+02:00  INFO 13963 --- [poll] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-07T20:12:57.924+02:00  INFO 13963 --- [poll] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 64342 (http) with context path '/'
+2025-10-07T20:12:57.931+02:00  INFO 13963 --- [poll] [    Test worker] dat250.group2.poll.poll.pollRestClient   : Started pollRestClient in 1.164 seconds (process running for 1.782)
 
 # Testing Redis Connection
 PING response: PONG
@@ -84,12 +70,17 @@ Poll results found in cache!
 Cached results: Option1:270,Option2:273,Option3:42
 Second call - Poll results found in cache!
 Cached results: Option1:270,Option2:273,Option3:42
-Cache TTL: 25 seconds
+Cache TTL: 9 seconds
 
 Redis Tests Completed Successfully!
-2025-10-07T19:57:06.453+02:00  INFO 7182 --- [poll] [0-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-07T19:57:06.454+02:00  INFO 7182 --- [poll] [0-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-07T19:57:06.455+02:00  INFO 7182 --- [poll] [0-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-07T20:13:02.760+02:00  INFO 13963 --- [poll] [0-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-07T20:13:02.760+02:00  INFO 13963 --- [poll] [0-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-07T20:13:02.761+02:00  INFO 13963 --- [poll] [0-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/fredrichegland/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.7/fbf3d6d649ed37fc9e9c59480a05be0a26e3c2da/byte-buddy-agent-1.17.7.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
 </testsuite>

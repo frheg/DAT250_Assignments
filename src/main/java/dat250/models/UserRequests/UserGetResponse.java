@@ -1,25 +1,26 @@
 package dat250.models.UserRequests;
 
 public class UserGetResponse {
-    private String userId;
+    private String username;
     private String email;
 
     // getters and setters
-    public UserGetResponse() {}
+    public UserGetResponse() {
+    }
 
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 }

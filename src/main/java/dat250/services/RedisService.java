@@ -11,7 +11,7 @@ public class RedisService {
 
     UnifiedJedis jedis = new UnifiedJedis("redis://localhost:6379");
 
-    public void runRedisTests() {
+    public void runRedis() {
 
         System.out.println("\n# Testing Redis Connection");
 
