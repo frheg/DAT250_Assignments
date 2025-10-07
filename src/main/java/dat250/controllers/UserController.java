@@ -29,14 +29,16 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseEntity<UserGetResponse> getUser(@PathVariable String id) {
         UserGetResponse user = pollManager.getRestrictedUser(id);
-        if (user == null) return ResponseEntity.notFound().build();
+        if (user == null)
+            return ResponseEntity.notFound().build();
         return ResponseEntity.ok(user);
     }
 
     @PostMapping("")
     public ResponseEntity<User> createUser(@RequestBody User user) {
         User createdUser = pollManager.createUser(user);
-        if (createdUser == null) return ResponseEntity.badRequest().build();
+        if (createdUser == null)
+            return ResponseEntity.badRequest().build();
 
         return ResponseEntity.ok(createdUser);
     }
@@ -44,7 +46,8 @@ public class UserController {
     @PutMapping("/{id}")
     public ResponseEntity<User> updateUser(@PathVariable String id, @RequestBody UserUpdateRequest updateRequest) {
         User updatedUser = pollManager.updateUser(id, updateRequest);
-        if (updatedUser == null) return ResponseEntity.notFound().build();
+        if (updatedUser == null)
+            return ResponseEntity.notFound().build();
 
         return ResponseEntity.ok(updatedUser);
     }

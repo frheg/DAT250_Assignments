@@ -26,7 +26,8 @@ public class VoteOptionController {
     @GetMapping("/{id}")
     public ResponseEntity<VoteOption> getVoteOption(@PathVariable String id) {
         VoteOption option = pollManager.getVoteOption(id);
-        if (option == null) return ResponseEntity.notFound().build();
+        if (option == null)
+            return ResponseEntity.notFound().build();
         return ResponseEntity.ok(option);
     }
 
@@ -35,7 +36,6 @@ public class VoteOptionController {
         VoteOption created = pollManager.createVoteOption(option);
         return ResponseEntity.ok(created);
     }
-
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteVoteOption(@PathVariable String id) {

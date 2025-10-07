@@ -1,26 +1,29 @@
 # Single Web Application
 
-*Students*: Kamil, Maren, Fredric
+_Students_: Kamil, Maren, Fredric
 
-*Course*: DAT250 at HVL Bergen - Master Software Engineering
+_Course_: DAT250 at HVL Bergen - Master Software Engineering
 
-*Code*: [https://github.com/Maren24/DAT250](https://github.com/Maren24/DAT250)
+_Code_: [https://github.com/Maren24/DAT250](https://github.com/Maren24/DAT250)
 
-*Code of task 1 and 2*: [https://github.com/Maren24/DAT250/tree/main/frontend](https://github.com/Maren24/DAT250/tree/main/frontend)
+_Code of task 1 and 2_: [https://github.com/Maren24/DAT250/tree/main/frontend](https://github.com/Maren24/DAT250/tree/main/frontend)
 
 ## Setup environment
 
 Create two files in the frontend-folder:
+
 - .env
 - .env.production
 
 Write into these files:
+
 ```bash
 # .env
 VITE_API_BASE_URL=http://localhost:8080
 ```
 
 And in the other:
+
 ```bash
 # .env.production
 VITE_API_BASE_URL=""
@@ -36,10 +39,9 @@ Overview over polls and possibility to vote:
 
 ![img.png](img/Poll_Overview_Frontend.png)
 
-
 ## Technical Challenges
 
-- Setup environment file: Different from ReactJS approach with "REACT_APP_" naming in Vite. Short part of refactoring
+- Setup environment file: Different from ReactJS approach with "REACT*APP*" naming in Vite. Short part of refactoring
 - During the development process a lot of different small issues occured that needed to be fixed in the Backend
   - e.g. missing functionality
   - e.g. CORS
