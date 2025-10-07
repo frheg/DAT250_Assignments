@@ -1,0 +1,30 @@
+meta {
+  name: 03 - Vote (Publishes to RabbitMQ)
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/votes
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "voteOptionId": "{{optionId}}",
+    "user": {
+      "username": "testuser"
+    }
+  }
+}
+
+script:post-response {
+  console.log("Vote created - check application logs for RabbitMQ event");
+}
+
+tests {
+  test("Vote created", function() {
+    expect(res.status).to.equal(200);
+  });
+}

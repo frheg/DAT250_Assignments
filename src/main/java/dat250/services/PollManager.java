@@ -233,7 +233,12 @@ public class PollManager {
     }
 
     // Vote CRUD
+    // Add a flag to prevent republishing
     public Vote createVote(Vote vote) {
+        return createVote(vote, true);
+    }
+
+    private Vote createVote(Vote vote, boolean publishEvent) {
         // Set voteId automatically only if not already set
         if (vote.getVoteId() == null || vote.getVoteId().trim().isEmpty()) {
             vote.setVoteId(UUID.randomUUID().toString());
@@ -257,7 +262,6 @@ public class PollManager {
                         if (v.getUser() != null && v.getUser().getUsername().equals(vote.getUser().getUsername())) {
                             VoteOption existingVo = voteOptions.get(v.getVoteOptionId());
                             if (existingVo != null && poll.getPollId().equals(existingVo.getPollId())) {
-
                                 return updateVote(v.getVoteId(), vote);
                             }
                         }
@@ -268,13 +272,32 @@ public class PollManager {
 
         votes.put(vote.getVoteId(), vote);
 
-        // Publish vote event to RabbitMQ
-        String username = vote.getUser() != null ? vote.getUser().getUsername() : null;
-        VoteOption option = voteOptions.get(vote.getVoteOptionId());
-        if (option != null) {
-            rabbitMQService.publishVoteEvent(option.getPollId(), vote.getVoteOptionId(), username);
+        // Only publish if this is a new vote from the API, not from RabbitMQ
+        if (publishEvent) {
+            String username = vote.getUser() != null ? vote.getUser().getUsername() : null;
+            VoteOption option = voteOptions.get(vote.getVoteOptionId());
+            if (option != null) {
+                rabbitMQService.publishVoteEvent(option.getPollId(), vote.getVoteOptionId(), username);
+            }
         }
 
+        return vote;
+    }
+
+    public Vote createVoteFromEvent(Vote vote) {
+        // Same logic as createVote but WITHOUT publishing to RabbitMQ
+        if (vote.getVoteId() == null || vote.getVoteId().trim().isEmpty()) {
+            vote.setVoteId(UUID.randomUUID().toString());
+        }
+
+        if (vote.getPublishedAt() == null) {
+            vote.setPublishedAt(Instant.now());
+        }
+
+        // Validation logic here...
+
+        votes.put(vote.getVoteId(), vote);
+        // DO NOT publish to RabbitMQ
         return vote;
     }
 

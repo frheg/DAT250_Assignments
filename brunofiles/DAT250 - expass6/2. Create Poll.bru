@@ -1,0 +1,40 @@
+meta {
+  name: 02 - Create Poll (Creates RabbitMQ Topic)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/polls
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "question": "Test Poll",
+    "publicAccess": true,
+    "createdBy": {
+      "username": "testuser"
+    },
+    "options": [
+      {"caption": "Option A"},
+      {"caption": "Option B"}
+    ]
+  }
+}
+
+script:post-response {
+  if (res.status === 200) {
+    bru.setVar("pollId", res.body.pollId);
+    bru.setVar("optionId", res.body.options[0].optionId);
+    console.log("Poll ID:", res.body.pollId);
+    console.log("Option ID:", res.body.options[0].optionId);
+  }
+}
+
+tests {
+  test("Poll created", function() {
+    expect(res.status).to.equal(200);
+  });
+}

@@ -1,0 +1,25 @@
+meta {
+  name: 04 - Verify Vote Stored
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{url}}/polls/{{pollId}}
+  body: none
+  auth: none
+}
+
+script:post-response {
+  if (res.status === 200) {
+    const voteCount = res.body.options[0].votes?.length || 0;
+    console.log("Vote count:", voteCount);
+    console.log(voteCount > 0 ? "RabbitMQ event processed!" : "No votes found");
+  }
+}
+
+tests {
+  test("Vote was stored", function() {
+    expect(res.body.options[0].votes).to.have.lengthOf.at.least(1);
+  });
+}

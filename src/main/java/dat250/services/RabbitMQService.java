@@ -98,16 +98,16 @@ public class RabbitMQService {
 
     private void processVoteEvent(String pollId, String message) {
         String[] parts = message.split(":");
-        String voteOptionId = parts[0]; // This is the transient optionId
+        String voteOptionId = parts[0];
         String username = parts.length > 1 ? parts[1] : "anonymous";
 
-        System.out.println("Processing vote: optionId=" + voteOptionId + ", username=" + username + ", pollId=" + pollId);
+        System.out
+                .println("Processing vote: optionId=" + voteOptionId + ", username=" + username + ", pollId=" + pollId);
 
         Vote vote = new Vote();
         vote.setVoteOptionId(voteOptionId);
         vote.setPublishedAt(Instant.now());
 
-        // For anonymous votes or when username is provided
         if (!"anonymous".equals(username)) {
             User user = new User();
             user.setUsername(username);
@@ -115,7 +115,7 @@ public class RabbitMQService {
         }
 
         try {
-            pollManager.createVote(vote);
+            pollManager.createVoteFromEvent(vote);
             System.out.println("Vote persisted for poll " + pollId + " on option " + voteOptionId);
         } catch (Exception e) {
             System.out.println("Failed to persist vote: " + e.getMessage());

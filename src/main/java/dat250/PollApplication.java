@@ -35,26 +35,56 @@ public class PollApplication {
 		}
 
 		private void runRabbitMQTestClient() {
-			System.out.println("\nInitializing RabbitMQ Service...");
-			String QUEUE_NAME = "hello";
+			System.out.println("\n#RabbitMQ");
+			System.out.println("#Testing poll event system...\n");
 
 			ConnectionFactory factory = new ConnectionFactory();
 			factory.setHost("localhost");
+
 			try (Connection connection = factory.newConnection();
 					Channel channel = connection.createChannel()) {
-				channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-				String message = "Hello World!";
-				channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
-				System.out.println("	Sent '" + message + "'");
 
+				System.out.println("Connected to RabbitMQ");
+
+				// Subscribe to all poll events to monitor the system
+				String monitorQueue = channel.queueDeclare().getQueue();
+				channel.queueBind(monitorQueue, "poll_events", "poll.*.vote");
+
+				System.out.println("Monitoring all poll vote events on 'poll_events' exchange");
+
+				// Set up consumer
 				DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-					String receivedMessage = new String(delivery.getBody(), "UTF-8");
-					System.out.println("	Received '" + receivedMessage + "'");
+					String message = new String(delivery.getBody(), "UTF-8");
+					String routingKey = delivery.getEnvelope().getRoutingKey();
+					System.out.println("[RabbitMQ Monitor] " + routingKey + " -> " + message);
 				};
-				channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {
+
+				channel.basicConsume(monitorQueue, true, deliverCallback, consumerTag -> {
 				});
+
+				System.out.println("\nListening for vote events for 5 seconds...");
+				Thread.sleep(5000);
+
+				// Now publish a test vote to demonstrate external voting
+				System.out.println("\n[TEST] Publishing test vote from standalone client...");
+				String testPollId = "test-poll-id"; // Use a real poll ID from your database
+				String testOptionId = "test-option-id"; // Use a real option ID
+				String testMessage = testOptionId + ":testuser";
+				String testRoutingKey = "poll." + testPollId + ".vote";
+
+				channel.basicPublish("poll_events", testRoutingKey, null,
+						testMessage.getBytes("UTF-8"));
+				System.out.println("[TEST] Published: " + testRoutingKey + " -> " + testMessage);
+
+				// Wait to see if it's received
+				System.out.println("\nListening for response for 10 more seconds...\n");
+				Thread.sleep(10000);
+
+				System.out.println("\nRabbitMQ Test Complete\n");
+
 			} catch (Exception e) {
-				e.printStackTrace();
+				System.err.println("RabbitMQ test failed: " + e.getMessage());
+				System.err.println("Make sure RabbitMQ is running on localhost:5672");
 			}
 		}
 	}

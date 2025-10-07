@@ -1,5 +1,7 @@
 # Experiment assignment 6 - RabbitMQ
 
+I implemented a simple RabbitMQ service that can send and receive messages to/from a RabbitMQ broker. The service is used in my Poll application to send messages when a new poll is created, and the PollManager listens for these messages and creates the poll in the database.
+
 ### Technical problems that you encountered during installation and use of Redis and how you resolved
 
 I had issues with dependencies in imports and circular dependencies between my RabbitMQService and PollManager as both autowired eachother. Solution was to use Lazy annotation in RabbitMQService on the PollManager autowiring.
