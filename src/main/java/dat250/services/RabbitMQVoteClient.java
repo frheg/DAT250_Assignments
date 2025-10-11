@@ -15,7 +15,7 @@ public class RabbitMQVoteClient {
         try (Connection connection = factory.newConnection();
                 Channel channel = connection.createChannel()) {
 
-            // Declare exchange (should already exist)
+            // Declare exchange
             channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.TOPIC, true);
 
             // Subscribe to all poll events
