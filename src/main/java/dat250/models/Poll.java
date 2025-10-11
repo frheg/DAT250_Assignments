@@ -31,15 +31,6 @@ public class Poll {
     public Poll() {
     }
 
-    /**
-     *
-     * Adds a new option to this Poll and returns the respective
-     * VoteOption object with the given caption.
-     * The value of the presentationOrder field gets determined
-     * by the size of the currently existing VoteOptions for this Poll.
-     * I.e. the first added VoteOption has presentationOrder=0, the secondly
-     * registered VoteOption has presentationOrder=1 ans so on.
-     */
     public VoteOption addVoteOption(String caption) {
         if (caption == null) {
             throw new IllegalArgumentException("caption must not be null");
